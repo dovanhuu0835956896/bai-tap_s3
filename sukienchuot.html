@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<img id="songoku" src="songoku.jfif" >
+<p>Di chuyen songoku tu trai sang phai</p>
+<input type="button" value="bam vao" onclick="khidot();"/>
+</form>
+
+<script>
+    let songohan = null;
+    songohan = document.getElementById("songoku");
+    function init() {
+        songohan = document.getElementById('songoku');
+        songohan.style.position = 'relative';
+        songohan.style.left = '0px';
+    }
+    function khidot() {
+        songohan.style.left = parseInt(songohan.style.left) + 10 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="songoku" src="songoku.jfif" style="position:absolute;left:200px; top:100px;" height="300" width="200" />
+</form>
+<body onload="tailieu();">
+<script>
+    function phimlen() {
+        let len = document.getElementById("songoku");
+        len.style.top = parseInt(len.style.top) - 20 + "px";
+    }
+    function phimxuong() {
+        let xuong = document.getElementById("songoku");
+        xuong.style.top = parseInt(xuong.style.top) + 20 + 'px';
+    }
+    function phimsangtrai() {
+        let trai = document.getElementById("songoku");
+        trai.style.left = parseInt(trai.style.left) - 20 + 'px';
+    }
+    function phimsangphai() {
+        let phai = document.getElementById("songoku");
+        phai.style.left = parseInt(phai.style.left) + 20 + 'px';
+    }
+    function dichuyen(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                phimsangtrai();
+                break;
+            case 39:
+                phimsangphai();
+                break;
+            case 38:
+                phimlen();
+                break;
+            case 40 :
+                phimxuong();
+                break;
+        }
+    }
+    function tailieu() {
+        window.addEventListener('keydown', dichuyen);
+    }
+</script>
+</body>
+</html>
