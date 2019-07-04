@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhsongay</title>
+</head>
+<body>
+<form>
+    <input type="text" id="nhapsongay" placeholder="nhap thang">
+    <button type="button" onclick="bamvao()">bam vao</button>
+    <p id="ketqua">ket qua</p>
+</form>
+<script>
+    function bamvao (){
+        let ketqua = document.getElementById("ketqua");
+        let ngay = parseInt(document.getElementById("nhapsongay").value);
+        switch (ngay) {
+            case 1:
+            case 3:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                ketqua.innerHTML = "thang" + ngay + "co 31 ngay"
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                ketqua.innerHTML = "thang" + ngay + "co 30 ngay"
+                break
+            case 2:
+                ketqua.innerHTML = "thang" + ngay+ "co 28 hoac 29 ngay"
+                break
+        }
+    }
+</script>
+</body>
+</html>
